@@ -1,0 +1,236 @@
+.homeContainer {
+    height: 100vh;
+    max-height: 100vh;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 10px 5%;
+        height: 75px;
+        box-shadow: 0px 3px 6px #00000029;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+            cursor: pointer;
+
+            span {
+                display: block;
+                width: 50px;
+                height: 5px;
+                border-radius: 5px;
+                background-color: var(--main-blue);
+                border: 1px solid var(--main-gray2);
+            }
+        }
+    }
+
+    main {
+        padding: 35px 5%;
+
+        h1 {
+            color: var(--main-blue);
+            text-align: center;
+            font: normal normal bold 51px/55px 'Montserrat';
+        }
+
+        .steps {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0;
+
+            div {
+                position: relative;
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    border: 1px solid var(--main-gray2);
+                    color: var(--main-blue);
+                    width: 65px;
+                    height: 65px;
+                    border-radius: 50%;
+                    font: normal normal bold 35px/40px 'Montserrat';
+                }
+
+                .pFill {
+                    background-color: var(--main-blue);
+                    color: white;
+                }
+
+                i {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    font-size: 15px;
+                    background-color: white;
+                    padding: 5px;
+                    border-radius: 50%;
+                    border: 1px solid var(--main-gray2);
+                    color: var(--main-blue);
+                }
+            }
+
+            hr {
+                width: 10vw;
+                height: 5px;
+                border: none;
+            }
+
+            .hrFill {
+                background-color: var(--main-blue);
+            }
+
+            .hrNotFill {
+                background: linear-gradient(to right, 
+                var(--main-blue) 0%,var(--main-blue) 14%,white 14%,white 28%, 
+                var(--main-blue) 28%,var(--main-blue) 42%,white 42%,white 57%, 
+                var(--main-blue) 57%,var(--main-blue) 71%,white 71%,white 85%, 
+                var(--main-blue) 85%,var(--main-blue) 100%);
+            }
+        }
+
+        .body {
+            position: relative;
+            display: flex;
+            align-items: center;
+            height: 50vh;
+
+            .forfait {
+                width: 90vw;
+                min-width: 200px;
+                max-width: 300px;
+
+                .header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 0;
+                    position: relative;
+                    background-color: white;
+                    border-top-left-radius: 25px;
+                    border-top-right-radius: 25px;
+                    border-top: 3px solid var(--main-light-gray);
+                    border-left: 3px solid var(--main-light-gray);
+                    border-right: 3px solid var(--main-light-gray);
+
+                    p {
+                        font: normal normal 600 20px/25px 'Montserrat';
+                        color: var(--main-blue);
+                    }
+
+                    i {
+                        position: absolute;
+                        right: 5%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        font-size: 10px;
+                        background-color: var(--main-blue);
+                        padding: 5px;
+                        border-radius: 50%;
+                        color: white;
+                    }
+                }
+
+                .bodyForfait {
+                    background-color: var(--main-blue);
+                    border-bottom-left-radius: 25px;
+                    border-bottom-right-radius: 25px;
+
+                    padding: 15px;
+                    color: white;
+
+                    .top {
+                        text-align: center;
+                        margin-bottom: 10px;
+
+                        p {
+                            font: normal normal 600 20px/22px 'Montserrat';
+                        }
+                        span {
+                            font: normal normal 600 17px/22px 'Montserrat'; 
+                        }
+                    }
+                }
+
+                .infoForfait {
+                    font: normal normal normal 15px/20px 'Montserrat';
+                    text-align: center;
+                }
+
+                .price {
+                    margin-top: 10px;
+                    font: normal normal bold 30px/35px 'Montserrat';
+                }
+            }
+
+            hr {
+                background-color: var(--main-blue);
+                border: none;
+                height: 250px;
+                width: 4px;
+                margin: 50px;
+                border-radius: 5px;
+            }
+
+            .info {
+                div {
+                    margin: 15px 0;
+                    p {
+                        font: normal normal 600 25px/35px 'Montserrat';
+                        color: var(--main-gray);
+                    }
+                    span {
+                        font: normal normal 500 15px/20px 'Montserrat';
+                        color: var(--main-gray2);
+                    }
+                }
+            }
+
+            button {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border: 1px solid var(--main-blue);
+                background-color: white;
+                border-radius: 5px;
+                padding: 10px 20px;
+                cursor: pointer;
+                color: var(--main-blue);
+                font: normal normal bold 20px/25px 'Montserrat';
+                transition-duration: 0.2s;
+
+                &:hover {
+                    background-color: var(--main-blue);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .homeContainer {
+        height: auto;
+        max-height: none;
+
+        main {
+            .body {
+                flex-direction: column;
+
+      
+                hr {
+                    width: 100%;
+                    height: 4px;
+                }
+            }
+        }
+    }
+}
